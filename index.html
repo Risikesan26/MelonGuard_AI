@@ -431,7 +431,7 @@ async function callClaudeAPI(userMessage, imageBase64, imageMime) {
   conversationHistory.push({ role: "user", content: content });
 
   const body = {
-    model: imageBase64 ? "llama-3.2-11b-vision-preview" : "openai/gpt-oss-120b",
+    model: imageBase64 ? "llama-3.2-11b-vision-preview" : "qwen/qwen3.6-27b",
     messages: [
       { role: "system", content: buildSystemPrompt() },
       ...conversationHistory
